@@ -1,0 +1,14 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.banner{
+    height: 100vh;
+    background-image: url("./images/image.jpg"), 
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4) );
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

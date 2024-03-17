@@ -1,0 +1,67 @@
+body{
+    background-color: burlywood;
+    /* font-family: "Bahianita", sans-serif;
+    font-weight: 400;
+    font-style: normal; */
+}
+
+/* .title {
+     color: rebeccapurple;
+     font-size: 50px;
+     padding: 40px;
+     text-align: center;
+     background: linear-gradient(45deg, red, rgb(177, 215, 38));
+     
+ }
+
+ .description {
+     color: rgb(242, 135, 5);
+     line-height: 4em;
+ }
+
+ #unique {
+     color: blue;
+ }
+
+ p {
+     color: purple;
+     font-size: larger;
+ } */
+
+.box{
+    width : 200px;
+    height: 200px;
+    border: 3px dotted black;
+    padding: 30px;
+    margin: 30px;
+    box-shadow: 9px 9px 20px rgb(229, 204, 204);
+}
+
+.test{
+    padding: 50;
+    background-color: aqua;
+    border:1px solid black;
+    width: 50%;
+    margin: auto;
+    padding: 12px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box1{
+    background-color: aqua;
+   
+}
+.box2{
+    background-color: rgb(48, 85, 85);
+    position: absolute;
+}
+.box3{
+    background-color: rgb(208, 217, 217);
+}

@@ -1,0 +1,24 @@
+ .centered {
+     margin-top: 200px;
+ }
+
+ @media (max-width: 997px) {
+     .lg-centered {
+         margin-top: 20px;
+     }
+ }
+
+ .underline {
+     text-decoration: underline;
+ }
+
+  .red-heart {
+      color: red;
+  }
+  .bg-end{
+    background-color: rgb(102, 165, 194);
+  }
+  .text-e{
+    color:rgb(5, 5, 41);
+    margin-top: 20px;
+  }

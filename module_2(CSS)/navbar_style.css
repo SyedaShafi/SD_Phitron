@@ -1,0 +1,95 @@
+body{
+    background-color: rgb(85, 121, 152);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aqua;
+}
+
+.logo{
+    width: 100px;
+}
+
+.menus-container{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.banner-img{
+    width: 80%;
+    border-radius: 30%;
+}
+
+.banner-container{
+    display:flex;
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+}
+
+.title{
+    font-size: 66px;
+    font-weight: bold;
+    color:aquamarine;
+    text-align: center;
+}
+.description{
+    font-size: 20px;
+}
+
+button{
+    padding: 15px 25px;
+    border: none;
+    background-color: rgb(41, 108, 86);
+    font-weight: bold;
+    font-size: 18px;
+    margin:5px;
+    color:aliceblue
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+}
+.service-card{
+    padding:12px;
+    width: 300px;
+    height:400px;
+    box-shadow: 8px 8px 8px rgb(8, 55, 55);
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid rgb(29, 139, 139)
+}
+
+.input-box{
+    padding: 15px 30px;
+    margin: 10px;
+}
+.contact-container{
+    text-align: center;
+}
+
+.text-area{
+    padding: 35px 50px;
+}
+
+.submit-btn{
+    padding: 10px 20px;
+    width: 15%;
+    margin-top: 20px;
+    background-color: aquamarine;
+    font-size:22px;
+    border: None; 
+}
+
+
+
+
