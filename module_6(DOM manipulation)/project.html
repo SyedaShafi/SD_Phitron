@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS PROJECT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="amount-container">
+      <div class="deposite amount-box">
+        <div>Deposite:</div>
+        <div id="deposite-amount">00</div>
+      </div>
+      <div class="withdraw amount-box">
+        <div>Withdraw:</div>
+        <div id="withdraw-amount">00</div>
+      </div>
+      <div class="total amount-box">
+        <div>Total:</div>
+        <div id="total-amount">00</div>
+      </div>
+    </div>
+
+    <div class="deposite-withdraw-container">
+      <div class="deposite-box input-box">
+        <input id="deposite-input" type="number" />
+        <br />
+        <button onclick="handleDeposite()" class="btn">Deposite</button>
+      </div>
+
+      <div class="withdraw-box input-box">
+        <input id="withdraw-input" type="number" />
+        <br />
+        <button onclick="handleWithdraw()" class="btn">Withdraw</button>
+      </div>
+    </div>
+    <script src="project.js"></script>
+  </body>
+</html>
