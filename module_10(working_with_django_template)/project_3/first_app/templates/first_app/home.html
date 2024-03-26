@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>{{ value | default:"its empty" }}</h1>
+  
+    <h1>This is from home page from app</h1>
+    <h2>Author: {{author}}</h2>
+    <h2>Age: {{age}}</h2>
+    <!--Date time-->
+    <h1>{{ birthday }}</h1>
+    <h1>{{ birthday | date:"D d M Y" }}</h1>
+
+    <!-- conditinal statement -->
+    {% if age >= 20 %}
+    <h4>You will get Driving license</h4>
+    {% elif age >= 10 and age < 20 %}
+    <h4>You are a child</h4>
+    {% else %}
+    <h1>you are a infant</h1>
+    {% endif %}
+
+    <!-- For loop -->
+    {% for i in courses %}
+    <h1>id: {{i.id}}</h1>
+    <h1>Name: {{i.name}}</h1>
+    <h1>Fee: {{i.fee}}</h1>
+    {% endfor %}
+
+    <!-- Join -->
+    {{lst}}
+    <h1>{{ lst | join:" - " }}</h1>
+  </body>
+</html>
