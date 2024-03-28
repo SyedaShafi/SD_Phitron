@@ -6,50 +6,52 @@
   </head>
   <body>
     <h1>HIIIIIIIIIIIIIIIII</h1>
-    <h1>{{ value | date:"H:i" }}</h1>
+    <h1>Time: {{ value | date:"H:i" }}</h1>
 
-    <h1>{{ author | length }}</h1>
+    <h1>Length: {{ author | length }}</h1>
 
-    <h1>{{ num | add:"2" }}</h1>
+    <h1>Add: {{ num | add:"2" }}</h1>
 
-    <h1>{{ name | addslashes }}</h1>
+    <h1>Addslash: {{ name | addslashes }}</h1>
 
-    <h1>{{ author | cut:" "}}</h1>
+    <h1>Cut : {{ author | cut:" "}}</h1>
 
-    <h1>{{ author | capfirst }}</h1>
+    <h1>Capfirst: {{ author | capfirst }}</h1>
 
-    <h1>{{ value | date:"D d M Y" }}</h1>
+    <h1>Date: {{ value | date:"D d M Y" }}</h1>
 
-    <h1>{{ empty | default:"nothing" }}</h1>
+    <h1>Empty: {{ empty | default:"nothing" }}</h1>
 
-    <h1>{{ lst | dictsort:"name" }}</h1>
+    <h1>List sort(using name): {{ lst | dictsort:"name" }}</h1>
 
-    <h1>{{ lst | dictsort:"age" }}</h1>
+    <h1>List sort(using age): {{ lst | dictsort:"age" }}</h1>
 
-    <h1>{{ num | divisibleby:"3" }}</h1>
+    <h1>Divisibleby 3: {{ num | divisibleby:"3" }}</h1>
 
-    <h1>{{ num | divisibleby:"2" }}</h1>
+    <h1>Divisibleby 2: {{ num | divisibleby:"2" }}</h1>
 
-    <h1>{{ lst | first }}</h1>
+    <h1>List first: {{ lst | first }}</h1>
 
-    <h1>{{ lst | join:" // " }}</h1>
+    <h1>Join (//): {{ lst | join:" // " }}</h1>
 
-    <h1>{{ lst | last }}</h1>
+    <h1>List last: {{ lst | last }}</h1>
 
-    <h1>{{ lst | length }}</h1>
+    <h1>List length: {{ lst | length }}</h1>
 
-    <h1>{{ lst | linenumbers }}</h1>
+    <h1>Linenumbers: {{ lst | linenumbers }}</h1>
 
-    <h1>{{ name | lower }}</h1>
+    <h1>Lower: {{ name | lower }}</h1>
 
-    <h1>{{ name | make_list }}</h1>
+    <h1>Make list: {{ name | make_list }}</h1>
 
-    <h1>{{ name | random }}</h1>
+    <h1>Random alpha: {{ name | random }}</h1>
 
-    <h1>{{ lst | random }}</h1>
+    <h1>Random List: {{ lst | random }}</h1>
 
-    <h1>{{ name | slugify }}</h1>
+    <h1>Slugify: {{ name | slugify }}</h1>
 
-    <h1>{{ name | wordcount }}</h1>
+    <h1>Truncatechars: {{ name|truncatechars:6 }}</h1>
+
+    <h1>Truncatewords: {{ name|truncatewords:2 }}</h1>
   </body>
 </html>

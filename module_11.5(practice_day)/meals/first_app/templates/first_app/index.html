@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %} 
+{% for d in data %}
+
+<div class="card m-2" style="width: 18rem">
+  <img src="{{d.strMealThumb}}" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{d.strMeal}}</h5>
+    <p class="card-text">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque error dolores laborum consequatur aut magni dolore.
+    </p>
+  </div>
+</div>
+
+{%endfor %} 
+{% endblock %}

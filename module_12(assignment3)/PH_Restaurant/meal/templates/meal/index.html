@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<div class="container mt-5 mb-5">
+  <div class="row justify-content_center">
+    {% for d in categories %}
+    <div class="col-md-4 col-sm-12">
+      <div class="card m-2">
+        <img
+          src="{{d.strCategoryThumb}}"
+          class="card-img-top img-fluid"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{d.idCategory}} {{d.strCategory}}</h5>
+          <p class="card-text">
+            {{d.strCategoryDescription | truncatewords:10 }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+{%endblock %}
