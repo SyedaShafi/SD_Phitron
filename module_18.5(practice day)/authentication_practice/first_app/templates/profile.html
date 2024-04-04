@@ -1,0 +1,9 @@
+{% extends "base.html" %} 
+{% block content %}
+
+
+<h1 class="mt-5 ms-5">This is Profile Page</h1>
+<a href="{% url "set_password" %}" class='btn btn-warning'> Set password without old password </a>
+<a href="{% url "password_change" %}" class='btn btn-warning'> Change old password </a>
+
+{%endblock content %}
