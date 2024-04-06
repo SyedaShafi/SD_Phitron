@@ -1,0 +1,68 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
+
+<div class="d-flex flex-wrap px-5 pt-3 align-items-center">
+
+  <div class="col-6">
+    <h1>Welcome to Django Blog</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus dolorum delectus necessitatibus temporibus adipisci, harum enim unde, suscipit in ipsum provident hic minima molestias reiciendis nihil veniam aut doloribus, ab quidem sit cum at nemo nulla autem! Dolor quaerat ea voluptatem ullam, consequuntur quisquam ut iste. Vitae exercitationem ipsum blanditiis. Nihil rem in quo magni quam sapiente ad ipsa voluptatum saepe quos temporibus, at iste? Eum saepe eos error ea recusandae, deserunt at quidem odio harum inventore. Necessitatibus eos sapiente architecto optio aut esse, facilis, voluptatibus assumenda ut exercitationem nobis molestias, quisquam nam quia odio ipsa? Voluptatem voluptas distinctio eaque.</p>
+  </div>
+  <div class="col-6">
+  <img src="{% static 'header.jpg' %}" />
+  </div>
+</div>
+
+<div class="row p-4">
+  <div class="col-2 bg-white ps-5 pt-5">
+    <h5>All categories</h5>
+    {% for c in category %}
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="cat" id="{{c.id}}" />
+      <label class="form-check-label" for="{{c.id}}">
+        <a class="text-decoration-none text-dark"  href="{% url "category_wise_post" c.slug %}"> 
+           {{ c.name}}  </a>
+        
+        </label>
+    </div>
+
+    {% endfor %}
+  </div>
+  <div class="col-10">
+    <h4 class="m-2 p-3">{{data | length}} results found</h4>
+    <div class="d-flex flex-wrap m-2">
+      {% for d in data %}
+
+     
+
+      <div class="col-sm-4">
+        <div class="card m-2">
+          <div class="card-body">
+             <div class="card" style="width: 18rem;">
+                <img src="{{d.image.url}}" class="card-img-top" alt="...">
+              </div>
+
+            <h5 class="card-title"><a style="text-decoration: none" href="{% url "detail_post" d.id %}">{{d.title}}</a></h5>
+            <h5>Author: {{d.author}}</h5>
+            <p class="card-text">{{d.content | truncatewords:4}}</p>
+            <p>
+              <span class="p-1">Category: </span>
+              {% for c in d.category.all %}
+
+              <span href="#" class="bg-secondary text-white m-2 rounded p-1"
+                >{{c}}</span
+              >
+
+              {% endfor %}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
