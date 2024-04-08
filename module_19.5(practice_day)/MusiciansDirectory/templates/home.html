@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Musician Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Album Rating</th>
+      <th scope="col">Instrument Type</th>
+      <th scope="col">Album Name</th>
+      <th scope="col">Release Date</th>
+      {% if user.is_authenticated %}
+      <th scope="col">Actions</th>
+      {% endif %}
+      
+    </tr>
+  </thead>
+  <tbody>
+  
+    {% for d in data %}
+        <tr>
+        <th scope="row">{{d.id}}</th>
+        <td> <a href="{% url "musician_edit" d.id %}"> {{d.musician.first_name}} {{d.musician.last_name}} </a> </td>
+        <td>{{d.musician.email}}</td>
+        <td>{{d.rating}}</td>
+        <td>{{d.musician.instrument_type}}</td>
+        <td>{{d.album_name}}</td>
+        <td>{{d.album_release_date}}</td>
+
+        {% if user.is_authenticated %}
+        
+          <td>
+              <a href = " {% url "album_edit" d.id %}" type="submit" class = "btn btn-primary mx-2">Edit</a>
+              <a href = "{% url "album_delete" d.id %}" type="submit" class = "btn btn-danger mx-2">Delete</a>
+          </td>
+        {% endif %}
+
+        </tr>
+       
+    {% endfor %}
+    
+  </tbody>
+</table>
+{% endblock content %}
